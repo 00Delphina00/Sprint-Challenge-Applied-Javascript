@@ -17,7 +17,7 @@
        
     } else {
       // else if `all` is false, only select the cards with matching this.tabData values
-       document.querySelectorAll(".card").forEach(card=>{
+       this.cards.forEach(card=>{
          if (card.dataset.tab === this.tabData)
             {card.style.display = "flex";}
             else{card.style.display = "none";}

@@ -12,10 +12,15 @@
     // Check to see if this.tabData is equal to 'all'
     if(this.tabData === 'all'){
       // If `all` is true, select all cards regardless of their data attribute values
+       document.querySelectorAll(".card").forEach(card => {card.style.display = "flex";});
        
     } else {
       // else if `all` is false, only select the cards with matching this.tabData values
-       
+       document.querySelectorAll(".card").forEach(card=>{
+         if (card.dataset.tab === this.tabData)
+            {card.style.display = "flex";}
+            else{card.style.display = "none";}
+          });
     }
     //  <- Delete this comment block when you work on the if statement
 
